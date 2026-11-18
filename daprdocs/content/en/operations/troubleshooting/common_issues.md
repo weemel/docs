@@ -72,7 +72,7 @@ There are some known cases where this might not properly work:
 
 - If your pod spec template is annotated correctly, and you still don't see the sidecar injected, make sure Dapr was deployed to the cluster before your deployment or pod were deployed.
 
-  If this is the case, restarting the pods will fix the issue.
+  If this is the case, restarting the pods will fix the issue. Consider enabling the [watchdog feature](https://docs.dapr.io/concepts/dapr-services/operator/) of the operator.
 
 - If you are deploying Dapr on a private GKE cluster, sidecar injection does not work without extra steps. See [Setup a Google Kubernetes Engine cluster]({{% ref setup-gke.md %}}).
 
